@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Recommender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:300,500&amp;display=swap'>
+  <style>
+    :root {
+      --primary-color: #000000;
+      --secondary-color: #FFFFFF;
+      --text-color: #000000;
+      --input-border-color: #C0C0C0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 100;
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      color: var(--text-color);
+      background-color:#FFFFF0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .container {
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #C0C0C0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .background-container {
+    background-image: url("mob.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: white;
+    text-align: center;
+  }
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .movie-form {
+      text-align: center;
+    }
+
+    .movie-input {
+      width: calc(100% - 22px);
+      padding: 10px;
+      border: 1px solid var(--input-border-color);
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .btn {
+      width: calc(50% - 5px);
+      padding: 10px;
+      border-radius: 5px;
+      color: #000000;
+      background-color: var(--secondary-color);
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0F52BA;
+    }
+
+    .creds {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .creds a {
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
+
+    .creds a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+  </style>
+</head>
+<body>
+<div class="header">
+  <header>
+    <h1>Movie Recommendation System</h1>
+  </header>
+</div>
+<div class="background-container">
+</div>
+<div class="container">
+  <h1>Popcorn ready? <br> Let's find your next movie!</h1>
+
+  <div class="movie-form">
+    <form action="{{ url_for('main') }}" method="POST">
+      <input type="text" class="movie-input" name="movie_name" placeholder="Enter a movie name" autocomplete="off" autocorrect="off" autocapitalize="off" required>
+      <button type="submit" class="btn">Submit</button>
+      <button type="reset" class="btn">Reset</button>
+    </form>
+  </div>
+
+  <p class="creds">Type the similar movies you want to find.</p>
+</div>
+  <footer>
+    <p>&copy; 2024 Movie Recommendation System</p>
+  </footer>
+
+</body>
+</html>

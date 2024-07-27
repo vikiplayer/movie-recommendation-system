@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Recommendation System</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    
+    .movie {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .movie h3 {
+      margin-top: 10px;
+    }
+
+    button{
+  margin-left: 10vh;
+  margin-top: 3vh;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Movie Recommendation System</h1>
+  </header>
+  
+  <section class="container">
+    <h2>We've uncovered the ultimate movie match for "{{ search_name }}"!</h2>
+    <div class="movie">
+      <h3>{{ movie_names[0] }}</h3>
+    </div>
+    <div class="movie">
+      <h3>{{ movie_names[1] }}</h3>
+    </div>
+    <div class="movie">
+      <h3>{{ movie_names[2] }}</h3>
+    </div>
+    <div class="movie">
+      <h3>{{ movie_names[3] }}</h3>
+    </div>
+    <div class="movie">
+      <h3>{{ movie_names[4] }}</h3>
+    </div>
+    <div class="movie">
+      <h3>{{ movie_names[5] }}</h3>
+    </div>
+    <div class="movie">
+      <h3>{{ movie_names[6] }}</h3>
+    </div>
+    <div class="movie">
+      <h3>{{ movie_names[7] }}</h3>
+    </div>
+    <div class="movie">
+      <h3>{{ movie_names[8] }}</h3>
+    </div>
+    <div class="movie">
+      <h3>{{ movie_names[9] }}</h3>
+    </div>
+    <!-- Add more recommended movies here -->
+  </section>
+  <button id="back_btn" onClick={window.history.back()}>Back to Home Page</button>
+
+  <footer>
+    <p>&copy; 2024 Movie Recommendation System</p>
+  </footer>
+</body>
+</html>
